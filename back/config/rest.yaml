@@ -1,0 +1,7 @@
+test:
+  type: rest
+  resource: App\RestController\TestController
+
+#candle:
+#  type: rest
+#  resource: App\RestController\CandleController

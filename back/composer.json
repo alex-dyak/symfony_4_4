@@ -7,10 +7,12 @@
         "ext-iconv": "*",
         "composer/package-versions-deprecated": "1.11.99.1",
         "doctrine/annotations": "^1.0",
-        "doctrine/doctrine-bundle": "^2.3",
-        "doctrine/doctrine-migrations-bundle": "^3.1",
-        "doctrine/orm": "^2.8",
+        "doctrine/doctrine-bundle": "^2.1",
+        "doctrine/doctrine-migrations-bundle": "^3.0",
+        "doctrine/orm": "^2.7",
+        "doctrine/common":"^2.13",
         "friendsofsymfony/oauth-server-bundle": "^1.6",
+        "friendsofsymfony/rest-bundle": "dev-error_listener",
         "friendsofsymfony/user-bundle": "^2.1",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^5.1",
@@ -42,6 +44,12 @@
         "twig/extra-bundle": "^2.12",
         "twig/twig": "^2.12"
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/yceruto/FOSRestBundle.git"
+        }
+    ],
     "require-dev": {
         "symfony/browser-kit": "^4.4",
         "symfony/css-selector": "^4.4",
