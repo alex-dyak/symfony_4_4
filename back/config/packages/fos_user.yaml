@@ -1,0 +1,27 @@
+fos_user:
+  db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+  firewall_name: main
+  user_class: App\Entity\User
+  from_email:
+    address: "noreply@dev.loc"
+    sender_name: "dev.loc site"
+  registration:
+    confirmation:
+      enabled:    true
+      template:   '@FOSUser/Registration/email.html.twig'
+
+  resetting:
+    email:
+      template:   '@FOSUser/Resetting/email.html.twig'
+  #firewall_name:          ~ # Required
+  #user_class:             ~ # Required
+  use_listener:           true
+  use_flash_notifications: true
+  use_authentication_listener: true
+  use_username_form_type: true
+  service:
+    mailer:                 fos_user.mailer.twig_swift
+    email_canonicalizer:    fos_user.util.canonicalizer.default
+    username_canonicalizer: fos_user.util.canonicalizer.default
+    token_generator:        fos_user.util.token_generator.default
+    user_manager:           fos_user.user_manager.default
